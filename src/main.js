@@ -4,6 +4,7 @@ import Vue from 'vue'
 import router from './router'
 import iView from 'iview'
 import App from './App'
+import store from './store'
 import i18n from '@/locale'
 import config from '@/config'
 import { directive as clickOutside } from 'v-click-outside-x'
@@ -42,7 +43,7 @@ Vue.directive('clickOutside', clickOutside)
 new Vue({
   el: '#app',
   router,
-  // i18n,
-  // store,
+  i18n,
+  store,
   render: h => h(App)
 })
